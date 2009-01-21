@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Example PunBBAuth Plugin usage</title>
+        <script src="http://www.google.com/jsapi"></script>
+        <script>
+            google.load("jquery", "1");
+        </script>
+        <script src="jquery.punbbauth.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.punbb').punbbauth();
+                $('#punbb-access-link').punbbauth({
+                    punbb_username : 'username', 
+                    punbb_password : 'password'
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>Of course, this all assumes that you have PunBB installed.  Also, normally your logout and access links would not be on the same page as your login.  You see that here strictly for demonstration.</p>
+        <div>
+            User visits xyz application.  Not only do we want to log them into xyz, but also to PunBB: 
+            <form name="xyz-login" id="xyz-login" class="punbb login" action="/path/to/xyz-app/login-validation.html" method="post">
+                <input name="username" />
+                <input name="password" type="password" />
+                <input type="submit" value="login" />
+            </form>
+        </div>
+        <p>
+            Imagine the user wants to logout of xyz application.  We want to ensure they are also logged out of punbb: 
+            <a id="xyz-logout" class="punbb logout" href="/path/to/xyz-app/logout.html">XYZ Logout</a>
+        </p>
+        <p>
+            Imagine user has already logged in using the form above, and wants to now access PunBB: 
+            <a id="punbb-access-link" class="access" href="/path/to/punbb/login.html">Access Forum</a>
+        </p>
+    </body>
+</html>
+
