@@ -94,8 +94,9 @@
      */
     function bind_login(o, $this){
         $this.bind('submit', function(e){
-            $that = $(this);
             e.preventDefault();
+            $that = $(this);
+            //e.preventDefault();
             $('<div id="punbb-login-form">')
                 .appendTo('body')
                 .hide()
@@ -110,6 +111,9 @@
                     }, function(){
                         //After post, trigger submit behavior for 
                         //current application login form
+                        //unbinding submit prior to triggering the submit
+                        //prevents a recursive call to $this.bind('submit', ...)
+                        $that.unbind('submit');
                         $that.trigger('submit');
                     });
                 });
