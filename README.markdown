@@ -1,8 +1,12 @@
 #PunBB Authentication JQuery Plugin#
 
-Provides an easy way to hook into PunBB auth login/logout.  Hooks should be applied to your own applications login form and logout link.  Another option is available to hook into an "access" link, however this will likely not see much use under most normal circumstances.
+Provides an easy way to hook into [PunBB](http://punbb.informer.com/) auth login/logout.  Hooks should be applied to your own applications login form and logout link.  Another option is available to hook into an "access" link, however this will likely not see much use under most normal circumstances.
 
 This plugin does not attempt to solve the issue of syncing your application with PunBB.  Rather, it attempts to solve the issue of single sign on when the user logs into your application.
+
+##Gotchas##
+
+As the plugin uses [XHR](http://en.wikipedia.org/wiki/XMLHttpRequest) to communicate with PunBB, it's usage is of course limited to the XHR [same origin policy](http://en.wikipedia.org/wiki/Same_origin_policy)
 
 ##Examples##
 
