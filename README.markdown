@@ -8,7 +8,7 @@ This plugin does not attempt to solve the issue of syncing your application with
 
 As the plugin uses [XHR](http://en.wikipedia.org/wiki/XMLHttpRequest) to communicate with PunBB, it's usage is of course limited to the XHR [same origin policy](http://en.wikipedia.org/wiki/Same_origin_policy)
 
-##Examples##
+##Examplesx##
 
 ###BIND TO LOGIN FORM###
 
