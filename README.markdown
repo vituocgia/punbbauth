@@ -4,7 +4,7 @@ Provides an easy way to hook into [PunBB](http://punbb.informer.com/) auth login
 
 This plugin does not attempt to solve the issue of syncing your application with PunBB.  Rather, it attempts to solve the issue of single sign on when the user logs into your application.
 
-##Gotchas##
+##Gotchasxxx##
 
 As the plugin uses [XHR](http://en.wikipedia.org/wiki/XMLHttpRequest) to communicate with PunBB, it's usage is of course limited to the XHR [same origin policy](http://en.wikipedia.org/wiki/Same_origin_policy)
 
